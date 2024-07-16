@@ -1,0 +1,107 @@
+h1 {
+    color: black;
+}
+
+body {
+    background-color: #003366;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    display: block;
+    /*retira o espaçamento inferior das imagens*/
+}
+
+#flex-center{
+    display: flex;
+    align-items: center; /*alinhamento vertical*/
+    justify-content: center; /*alinhamento horizontal*/
+    height: 100vh; /* vh = unidade de medida */
+}
+
+#principal {
+    background-color: #ffffff;
+    width: 1000px; /*largura*/
+    height: auto;  /*altura*/
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #666666;
+}
+
+#conteudo h1 span {
+
+    color: rgb(127, 157, 255);
+    text-decoration: underline;
+
+}
+
+#conteudo h1 {
+    font-size: 36px;
+    color: #333333;
+}
+
+#conteudo p{
+    margin-top: 0;
+    
+}
+
+#conteudo input{
+
+    width: 450px;
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box; /*faz com que o padding não aumente o elemento*/
+    border: 1px solid #CCCCCC;
+    /*border: none;*/
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+#conteudo button{
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 45px; /*vertical (top/buttom) horizontal (left/right)*/
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#conteudo button:hover{
+    background-color: #ff3131;
+}
+
+/*Media Queries*/
+/*se a tela do usuário for de até 1024px*/
+@media (max-width: 1024px){
+
+    #principal{
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+        padding: 20px;
+        justify-content: center;
+    }
+
+    #imagem{
+        /*width: 45%;*/
+        display: none;
+    }
+
+    #conteudo input{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    #principal{
+        width: 70%;
+        border-radius: 10px;
+    }
+    
+}
